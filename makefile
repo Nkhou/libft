@@ -1,5 +1,6 @@
 NAME = libft.a
 CC = gcc
+FLAGS = -Wall -Wextra -Werror
 SRCS = 	ft_isdigit.c\
 		ft_memmove.c\
 		ft_strdup.c\
@@ -47,13 +48,13 @@ $(NAME): $(OBJCTS) libft.h
 	ar crs $(NAME) $(OBJCTS)
 
 $(OBJCTS): $(SRCS)
-	$(CC) -c $(SRCS)
+	$(CC) $(FLAGS) -c $(SRCS)
 
 clean:
-	$(RM) $(OBJCTS)
+	rm -f $(OBJCTS)
 
 fclean: clean
-	$(RM) libft.a
+	rm -f $(NAME)
 
 re: fclean all
 
