@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 10:20:56 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/19 21:05:00 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/20 15:34:40 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ char *ft_itoa(int n)
 		p = ft_number(n);
 	else
 		p = ft_signe(n);
-	p[ft_lent(n) - 1] = '\0';
+	p[ft_lent(n)] = '\0';
 	return (p);
 }
 int main()

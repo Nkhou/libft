@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 17:20:15 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/19 20:30:13 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/20 14:16:55 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	j = 0;
+	if (!s1 || !s2)
+		return (NULL);
 	mys1 = ft_strlen(s1) - 1;
 	mys2 = ft_strlen(s2) + 1;
 	d = mys1 + mys2;

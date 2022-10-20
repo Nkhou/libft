@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 22:31:09 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/19 20:48:38 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/20 15:20:11 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,8 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	k = 0;
 	r = 0;
+	if (!s)
+		return (NULL);
 	p = malloc((ft_word(s, c) + 1) * sizeof(char *));
 	if (!p)
 		return (NULL);

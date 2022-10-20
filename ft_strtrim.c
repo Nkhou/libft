@@ -6,13 +6,13 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 17:01:09 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/19 20:33:10 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/20 16:53:23 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_set(char s1, char const  *set)
+static int ft_is_in_set(char s1, char const  *set)
 {
 	int i;
 
@@ -31,28 +31,37 @@ char *ft_strtrim(char const *s1, char const *set)
 	char *p;
 	int j;
 	int d;
+	int cmp;
 
-	i = 0;
-	d = 0;
-	j = ft_strlen(s1) ;
 	if (!s1 || !set)
 		return NULL;
-	p = (char *) malloc(ft_strlen((char *)s1) + 1);
+	i = 0;
+	while (s1[i] && ft_is_in_set(s1[i], set) == 1)
+			i++;
+	j = ft_strlen(s1) ;
+	cmp = i;
+	while (j >= 0 && ft_is_in_set(s1[j - 1], set) == 1)
+		j--;
+	d = 0;
+	while (i < j) 
+	{
+		d++;
+		i++;
+	}
+	p = malloc(d + 1);
+	d = 0;
 	if (p == NULL)
 		return (NULL);
-	while (ft_set(s1[i], set) == 1)
-			i++;
-	while (ft_set(s1[j - 1], set) == 1)
-		j--;
-	while (i < j)
+	while (cmp < j )
 	{
-		p[d] = s1[i];
-		i++;
+		p[d] = s1[cmp];
+		cmp++;
 		d++;
 	}
 	p[d] = '\0';
 	return (p);
 }
+
 // int main()
 // {
 // 	int i;
@@ -60,10 +69,8 @@ char *ft_strtrim(char const *s1, char const *set)
 // 	i = 0;
 // 	char *s1 = "\t   \n\n\n  \n\n\t    Hello \t  Please\n Trim me !\t\t\t\n  \t\t\t\t  ";
 //     char *s2 = "Hello \t  Please\n Trim me !";
-// 	char *d = ft_strtrim(s1,s2);
-// 	while(d[i])
-// 	{
-// 	printf("%c", d[i++]);
-// 	}
+// 	char *d = ft_strtrim(s1, " \n\t");
+	
+// 	printf("%d\n%s", ft_strlen(d), d);
 // 	return (0);
 // }

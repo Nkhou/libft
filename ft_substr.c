@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/11 15:50:09 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/19 20:59:03 by nkhoudro         ###   ########.fr       */
+/*   Created: 2022/10/20 15:14:14 by nkhoudro          #+#    #+#             */
+/*   Updated: 2022/10/20 16:04:03 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,19 @@ char	*ft_substr(char const	*s, unsigned int	start, size_t	len)
 	i = start;
 	cmp = 0;
 	
+	if (!s)
+		return (NULL);
 	str = malloc(len + 1);
+	if (start >= ft_strlen(s))
+		return (str);
 	if (!str)
 		return (NULL);
-	while (i < len)
-		str[cmp++] = (char)s[i++];
+	while (cmp < len && s[i])
+	{
+		str[cmp] = (char )s[i];
+		cmp++;
+		i++;
+	}
 	str[cmp] = '\0';
 	return (str);
 }
-//  int main()
-//  {
-//  	char *str = "jgfdjuduu";
-//  	printf("%s \n", ft_substr(str,2,3));
-//  	return (0);
-//  }
-	

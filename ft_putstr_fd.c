@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 22:25:46 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/16 22:27:06 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/20 15:29:34 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,12 @@ void	ft_putstr_fd(char *s, int fd)
 	int i;
 
 	i = 0;
+	if (s != NULL)
+	{
 	while (s[i])
 	{
 		write(fd, &s[i], 1);
 		i++;
+	}
 	}
 }

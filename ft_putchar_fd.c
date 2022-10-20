@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 20:43:35 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/16 22:56:10 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/20 15:24:03 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write (fd, &c, fd);
+	write (fd, &c, 1);
 }
 
 // int main(int ac, char **av)
