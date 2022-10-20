@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:37:29 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/12 01:32:43 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/19 09:54:37 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char	*my_dst;
 	unsigned char	*my_src;
-	int	i;
+	size_t	i;
 
 	i = 0;
 	

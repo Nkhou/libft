@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 01:30:21 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/16 16:52:04 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/19 10:29:08 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	return (str);
 }
-int main()
-{
-	char *str = "hello";
-	printf("%s", ft_strmapi(str, f));
-	return (0);
-}
+// int main()
+// {
+// 	char *str = "hello";
+// 	printf("%s", ft_strmapi(str, f));
+// 	return (0);
+// }

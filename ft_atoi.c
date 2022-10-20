@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:36:26 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/11 19:03:05 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/19 21:14:22 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int ft_atoi(const char *str)
 {
-	long int	i;
-	long int	sgn;
-	long int res;
+	long i;
+	long sgn;
+	long res;
 
 	i = 0;
 	sgn = 1;

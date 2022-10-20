@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:38:11 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/11 22:19:30 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/19 13:40:59 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,15 @@ char	*ft_strrchr(const char *s, int c)
 
 	i = ft_strlen((char *)s);
 	p = (char *)s;
-	while (p[i] != c )
+	while (i >= 0)
 	{
+		if (p[i] == c)
+		{
+			return (p + i);
+		}
 		i--;
 	}
-	return (&p[i]);
+	return NULL;
 }
 // int main () {
 //    const char str[] = "GGSG.hhdhsh.dshh";

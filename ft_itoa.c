@@ -6,23 +6,26 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 10:20:56 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/17 23:08:55 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/19 21:05:00 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int ft_lent(n)
+int ft_lent(int n)
 {
 	int i;
 	
 	i = 0;
 	if (n < 0)
 		n *= (-1);
+	
 	while (n / 10 > 9)
 	{
 		n = n / 10;
 		i++;
 	}
+	if (n == 0)
+		i++;
 	return (i);
 	printf ("%d", i);
 }
@@ -98,9 +101,9 @@ char *ft_itoa(int n)
 	p[ft_lent(n) - 1] = '\0';
 	return (p);
 }
-// int main()
-// {
+int main()
+{
 	
-// 	char *str = ft_itoa(-2147483648);
-// 	printf("%s", str);
-// }
+	char *str = ft_itoa(0);
+	printf("%s", str);
+}

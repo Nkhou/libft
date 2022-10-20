@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:38:01 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/17 23:18:11 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/19 14:07:15 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
 	my_s1 = (unsigned char *)s1;
 	my_s2 = (unsigned char *)s2;
 	
-	while (i < n)
+	while (i < n && (my_s1[i] != '\0' || my_s2[i] != '\0'))
 	{
-		if (my_s1[i] != my_s2[i] && my_s2[i] != '\0')
+		if (my_s1[i] != my_s2[i])
 			return (my_s1[i] - my_s2[i]);
 		i++;
 	}

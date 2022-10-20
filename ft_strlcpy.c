@@ -1,27 +1,30 @@
 /* ************************************************************************** */
-/*																			*/
-/*														:::	  ::::::::   */
-/*   ft_strlcpy.c									   :+:	  :+:	:+:   */
-/*													+:+ +:+		 +:+	 */
-/*   By: nkhoudro <nkhoudro@student.42.fr>		  +#+  +:+	   +#+		*/
-/*												+#+#+#+#+#+   +#+		   */
-/*   Created: 2022/10/07 11:13:40 by nkhoudro		  #+#	#+#			 */
-/*   Updated: 2022/10/07 16:22:50 by nkhoudro		 ###   ########.fr	   */
-/*																			*/
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/19 14:20:15 by nkhoudro          #+#    #+#             */
+/*   Updated: 2022/10/19 15:33:48 by nkhoudro         ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
 
+
 #include "libft.h"
-#include<stdlib.h>
-size_t  ft_strlcpy(char *dst, const char *src, unsigned int  dstsize)
+
+size_t	ft_strlcpy(char *dst, const char *src, size_t	dstsize)
 {
-	unsigned int i;
-	unsigned int cmp;
+	size_t	i;
+	size_t	cmp;
 
 	i = 0;
 	cmp = 0;
-	while (src[cmp] && cmp < dstsize )
+	while (src[cmp] != '\0')
 		cmp++;
-	while (i < dstsize  && dstsize > 0)
+	if (dstsize == 0)
+		return (cmp);
+	while (i < dstsize - 1 && src[i] != '\0')
 	{
 		dst[i] = src[i];
 		i++;
@@ -37,8 +40,6 @@ size_t  ft_strlcpy(char *dst, const char *src, unsigned int  dstsize)
 
 // 	r = strlcpy( buffer, string, size);
 // 	printf("Copied '%s' into '%s', length %d\n", string, buffer, r);
-
-	
 // }
 
 // int main()

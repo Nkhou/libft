@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 17:01:09 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/12 22:30:36 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/19 20:33:10 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char *ft_strtrim(char const *s1, char const *set)
 	j = ft_strlen(s1) ;
 	if (!s1 || !set)
 		return NULL;
-	p = (char *) malloc(ft_strlen(s1) + 1);
+	p = (char *) malloc(ft_strlen((char *)s1) + 1);
 	if (p == NULL)
 		return (NULL);
 	while (ft_set(s1[i], set) == 1)

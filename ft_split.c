@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 22:31:09 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/14 02:39:12 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/19 20:48:38 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ char	**ft_split(char const *s, char c)
 	p = malloc((ft_word(s, c) + 1) * sizeof(char *));
 	if (!p)
 		return (NULL);
-	p = ft_malloc(s, p, c, ft_word(s, c));
+	p = ft_malloc(s, p, c, ft_word(s, c) + 1);
 	while (s[i])
 	{
 		r = 0;
@@ -102,14 +102,14 @@ char	**ft_split(char const *s, char c)
 	return (p);
 }
 
-int	main(void)
-{
-	int i = 0;
-	char **d = ft_split("A b  Chhh                    Dv     ll",' ');
-	while (i < 5)
-	{
-		printf("%s\n", d[i]);
-		i++;
-	}
-	return (0);
-}
+// int	main(void)
+// {
+// 	int i = 0;
+// 	char **d = ft_split("     A b  Chhh                    Dv     ll          ",' ');
+// 	while (i < 5)
+// 	{
+// 		printf("%c\n", d[i]);
+// 		i++;
+// 	}
+// 	return (0);
+// }

@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:38:08 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/11 18:41:04 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/19 20:09:51 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,22 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t i;
 
 	i = 0;
-	if (needle == NULL || needle == haystack)
+	if (needle[0] == '\0')
 		return ((char *)haystack);
-	while (haystack[i])
+	while (i < len && haystack[i])
 	{
-		if (ft_strncmp(haystack + i, needle, len) == 0)
+		if (len - i < ft_strlen(needle))
+			return NULL;
+		if (ft_strncmp(haystack + i, needle, ft_strlen(needle)) == 0)
 			return ((char *)haystack + i);
 		i++;
 	}
 	return (NULL);
 }
+
+// hjsdsjkheronss
+// hero
+// 5
 // int main()
 // {
 // 	const char *h;
