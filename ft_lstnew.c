@@ -1,40 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/10 17:36:36 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/22 17:59:22 by nkhoudro         ###   ########.fr       */
+/*   Created: 2022/10/22 21:54:30 by nkhoudro          #+#    #+#             */
+/*   Updated: 2022/10/22 23:38:08 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+t_list				*ft_lstnew(void *content)
 {
-	char *str;
-	size_t i;
+	t_list *head;
+	head = NULL;
+	head = ( t_list *)malloc(sizeof( t_list));
+	if (!head)
+		return (NULL);
+	head->content = content;
+	head->next = NULL;
+	return (head);
+}
 
-	str = (char *)s;
-	i = 0;
-	while (i < n)
+int	main(void)
+{
+	t_list *head ;
+	int arr[] = {1, 3,3};
+	head = ft_lstnew(arr);
+
+	while (head != NULL)
 	{
-		str[i] = 0;
-		i++;
+		printf("%d", head->content);
+		head = head -> next;
 	}
+	return (0);
 }
-/*int main()
-{
-	char str[50] = "GeeksForGeeks is for programming geeks.";
-	printf("\nBefore (): %s\n", str);
-
-	// Fill 8 characters starting from str[13] with '.'
-	ft_bzero(str +3 , 8*sizeof(char));
-
-	printf("After memset():  %s", str);
-	return 0;
-}
- */

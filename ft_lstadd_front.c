@@ -1,40 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/10 17:36:36 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/22 17:59:22 by nkhoudro         ###   ########.fr       */
+/*   Created: 2022/10/22 23:29:13 by nkhoudro          #+#    #+#             */
+/*   Updated: 2022/10/23 00:22:17 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	char *str;
-	size_t i;
-
-	str = (char *)s;
-	i = 0;
-	while (i < n)
-	{
-		str[i] = 0;
-		i++;
-	}
+	new -> next = *lst;
+	*lst = new;
 }
-/*int main()
+int main()
 {
-	char str[50] = "GeeksForGeeks is for programming geeks.";
-	printf("\nBefore (): %s\n", str);
-
-	// Fill 8 characters starting from str[13] with '.'
-	ft_bzero(str +3 , 8*sizeof(char));
-
-	printf("After memset():  %s", str);
-	return 0;
+	
 }
- */

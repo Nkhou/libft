@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:36:26 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/20 14:33:37 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/22 21:17:33 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int ft_atoi(const char *str)
 	long i;
 	long sgn;
 	long res;
+	long rv;
 
 	i = 0;
 	sgn = 1;
@@ -31,7 +32,14 @@ int ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9' && str[i] != '\0')
 	{
+		rv = res;
 		res = (res * 10) + (str[i] - '0');
+		if(res / 10 != rv)
+		{
+			if (sgn == -1)
+				return (0);
+			return (-1);
+		}
 		i++;
 	}
 	return (res * sgn);

@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:37:38 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/19 12:50:46 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/22 21:00:32 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,18 @@ char *ft_strchr(const char *s, int c)
 
 	i = 0;
 	p = (char *)s;
+	// if (!s)
+	// 	return (NULL);
 
 	while (p[i])
 	{
-		if (p[i] == c)
+		if (p[i] == (char)c)
 		{
 			return (p + i);
 		}
 		i++;
 	}
-	if (p[i] == '\0' && c == '\0')
+	if (p[i] == '\0' && (char)c == '\0')
 		return (&p[i]);
 	return (NULL);
 }

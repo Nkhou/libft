@@ -6,26 +6,26 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 22:31:09 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/20 15:20:11 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/21 22:07:55 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_free(char **p)
+void	ft_free(char **p, int last)
 {
 	int	i;
 
 	i = 0;
-	while (p[i])
+	while (i < last)
 	{
 		free(p[i]);
 		i++;
 	}
 	free(*p);
 }
-
-char	**ft_malloc(char const *s, char **p, char c, int d)
+static int	ft_skip(char const *s, int i, char c);
+int	ft_malloc(char const *s, char **p, char c, int nwords)
 {
 	int	i;
 	int	j;
@@ -33,85 +33,109 @@ char	**ft_malloc(char const *s, char **p, char c, int d)
 
 	j = 0;
 	r = 0;
-	i = 0;
-	while (s[j] == c)
-		j++;
-	while (r < d)
+	j = ft_skip(s, j, c);
+	while (r < nwords)
 	{
+		j = ft_skip(s, j, c);
 		i = 0;
-		while (s[j] && s[j] == c)
-			j++;
-		while (s[j] && s[j++] != c)
+		while (s[j] && s[j] != c)
+		{
 			i++;
-		p[r] = (char *)malloc(sizeof(char *) * i + 1);
+			j++;
+		}
+		p[r] = (char *)malloc(sizeof(char) * (i + 1));
 		if (!p[r])
 		{
-			ft_free(&p[r]);
-			break ;
+			ft_free(&p[r], r);
+			return (0); // Failure
 		}
 		r++;
 	}
-	return (p);
+	return (1);// Success
 }
 
+static int ft_skip(char const *s, int i, char c)
+{
+	while (s[i] && s[i] == c)
+		i++;
+	return (i);
+}
 int	ft_word(char const *s, char c)
 {
-	int	i;
-	int	j;
+	
+	int i;
+	int words;
 
 	i = 0;
-	j = 0;
-	while (s[i] == c)
-		i++;
+	words = 0;
 	while (s[i])
 	{
-		if (s[i] == c && s[i - 1] != c && s[i + 1] != '\0')
-			j++;
-		i++;
+		i = ft_skip(s, i, c);
+		if (s[i] && s[i] != c)
+			words++;
+		while (s[i] && s[i] != c)
+			i++;
 	}
-	if (s[i] == '\0' && s[i - 1] == c)
-		return (j);
-	return (j + 1);
+	return (words);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**p;
-	int		i;
-	int		r;
-	int		k;
+	int		count;
+	int	i;
+	int	j;
+	int	r;
 
-	i = 0;
-	k = 0;
-	r = 0;
 	if (!s)
+		return NULL;
+	count = ft_word(s, c);
+	p = (char **) malloc(sizeof(char *) * (count + 1)); // Array of strings (length = count + 1 (NULL))
+	if (!p || ft_malloc(s, p, c, count) == 0) // Protection
 		return (NULL);
-	p = malloc((ft_word(s, c) + 1) * sizeof(char *));
-	if (!p)
-		return (NULL);
-	p = ft_malloc(s, p, c, ft_word(s, c) + 1);
-	while (s[i])
+	j = 0;
+	i = 0;
+	while (j < count)
 	{
 		r = 0;
-		while (s[i] && s[i] == c)
-			i++;
-		while (s[i] && s[i] != c)
-			p[k][r++] = s[i++];
-		p[k][r] = '\0';
-		k++;
+		i = ft_skip(s, i, c);
+		while (s[i] && s[i] !=c)
+		{
+			p[j][r++] = s[i++];
+		}
+		p[j][r] = '\0';
+		j++;
 	}
-	p[k] = NULL;
+	p[j] = NULL;
 	return (p);
 }
 
-// int	main(void)
+// void display_array(char **arr)
 // {
 // 	int i = 0;
-// 	char **d = ft_split("     A b  Chhh                    Dv     ll          ",' ');
-// 	while (i < 5)
+
+// 	if (!arr)
+// 		return ;
+// 	while (arr[i])
 // 	{
-// 		printf("%c\n", d[i]);
+// 		printf("[%s]", arr[i]);
 // 		i++;
 // 	}
+// 	printf("\n");
+// }
+
+// int	main(void)
+// {
+// 	display_array(ft_split("  dev,,cdjdvj   vvxxcz", ','));
+// 	display_array(ft_split("  dev,,cdjdvj   vvxxcz", ' '));
+// 	display_array(ft_split("  dev,,cdjdvj   vvxxcz", ' '));
+// 	display_array(ft_split("  dev,,cdjdvj   vvxxcz", 'v'));
+// 	display_array(ft_split("  dev,,cdjdvj   vvxxcz", 'd'));
+// 	display_array(ft_split("n  dev,,cdjdvj   vvxxcz", '\0'));
+// 	display_array(ft_split("  dev,,cdjdvj   vvxxcz", 'z'));
+// 	display_array(ft_split("", ' '));
+// 	display_array(ft_split("", '\0'));
+// 	display_array(ft_split(" ", '\0'));
+// 	display_array(ft_split("hello", 'l'));
 // 	return (0);
 // }
