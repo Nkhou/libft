@@ -1,38 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/22 21:54:30 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/23 19:35:50 by nkhoudro         ###   ########.fr       */
+/*   Created: 2022/10/23 18:35:52 by nkhoudro          #+#    #+#             */
+/*   Updated: 2022/10/23 19:40:00 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list				*ft_lstnew(void *content)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list *head;
-	head = NULL;
-	head = ( t_list *)malloc(sizeof( t_list));
-	if (!head)
-		return (NULL);
-	head->content = content;
-	head->next = NULL;
-	return (head);
+	
+	while (lst)
+	{
+		del(*lst-> content);
+		free(*lst);
+		*lst = *lst->next;
+	}
 }
-
-// int	main(void)
-// {
-// 	t_list *head ;
-// 	head = ft_lstnew("arr");
-
-// 	while (head != NULL)
-// 	{
-// 		printf("%s", head->content);
-// 		head = head -> next;
-// 	}
-// 	return (0);
-// }

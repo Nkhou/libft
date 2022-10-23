@@ -1,43 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/22 23:29:13 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/23 22:13:12 by nkhoudro         ###   ########.fr       */
+/*   Created: 2022/10/23 16:26:28 by nkhoudro          #+#    #+#             */
+/*   Updated: 2022/10/23 19:38:12 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	new -> next = *lst;
-	*lst = new;
+	del(lst-> content);
+	free(lst);
 }
 // int main()
 // {
-// 	t_list *lst = NULL;
-// 	t_list *new = malloc(sizeof (t_list));
-
-// 	int a = 444;
-// 	new->content = &a;
-// 	new->next = NULL;
-// 	lst = new;
-
-// t_list *front = malloc(sizeof (t_list));
-
-// 	int b = 888;
-// 	front->content =  &b;
-// 	front->next = NULL;
-
-// 	ft_lstadd_front(&lst, front);
-	
+// 	t_list **lst = NULL;
+// 	t_list *second = NULL;
+// 	t_list *third = NULL;
+// 	t_list *new = NULL;
+// 	*lst = ft_lstnew("d");
+// 	second = ft_lstnew("a");
+// 	third = ft_lstnew("m");
+// 	new = ft_lstnew("n");
+// 	lst = &second;
+// 	ft_lstadd_front(lst, new);
+// 	ft_lstdelone(lst, third);
 // 	while (lst)
 // 	{
-// 		printf("%d\n",*((int *)lst->content));
-// 		(lst) = (lst)->next;
+// 		printf("%d", lst->content);
+// 		lst = lst->next;
 // 	}
 // }
