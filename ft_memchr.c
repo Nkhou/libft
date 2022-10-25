@@ -6,18 +6,17 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:37:15 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/19 12:24:02 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/24 16:49:52 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*p;
-	unsigned char ch;
-	
+	unsigned char	ch;
+
 	ch = (unsigned char)c;
 	p = (unsigned char *)s;
 	while (n-- > 0)

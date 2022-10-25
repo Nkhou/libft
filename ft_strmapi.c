@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 01:30:21 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/20 15:14:50 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/25 14:25:04 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 // }
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int i;
-	char *str;
+	char	*str;
+	int		i;
 
 	i = 0;
 	if (!s)

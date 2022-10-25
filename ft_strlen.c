@@ -6,10 +6,9 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:37:56 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/10 17:37:57 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/24 17:09:59 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 
@@ -22,5 +21,3 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
-
-

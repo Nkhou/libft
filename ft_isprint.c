@@ -6,14 +6,13 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:37:09 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/11 18:39:41 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/24 16:42:22 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-# include "libft.h"
-
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c < 127)
 		return (1);

@@ -6,33 +6,33 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 21:54:30 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/23 19:35:50 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/25 12:20:05 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list				*ft_lstnew(void *content)
+t_list	*ft_lstnew(void *content)
 {
-	t_list *head;
-	head = NULL;
-	head = ( t_list *)malloc(sizeof( t_list));
-	if (!head)
+	t_list	*lst;
+
+	lst = (t_list *)malloc(sizeof(t_list));
+	if (!lst)
 		return (NULL);
-	head->content = content;
-	head->next = NULL;
-	return (head);
+	lst->content = content;
+	lst->next = NULL;
+	return (lst);
 }
 
 // int	main(void)
 // {
-// 	t_list *head ;
-// 	head = ft_lstnew("arr");
+// 	char *data = "hello, i'm a data";
+//         t_list *l = ft_lstnew(data);
 
-// 	while (head != NULL)
+// 	while (l != NULL)
 // 	{
-// 		printf("%s", head->content);
-// 		head = head -> next;
+// 		printf("%s", l->content);
+// 		l = l -> next;
 // 	}
 // 	return (0);
 // }

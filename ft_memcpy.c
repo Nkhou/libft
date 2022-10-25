@@ -6,18 +6,17 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:37:24 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/11 19:35:00 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/24 16:58:32 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 
 void	*ft_memcpy( void	*destination, const void	*source, size_t size )
 {
-	char *str;
-	char *dst;
-	size_t i;
+	char	*str;
+	char	*dst;
+	size_t	i;
 
 	str = (char *)source;
 	dst = destination;

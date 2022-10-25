@@ -1,15 +1,14 @@
+CC = cc
 NAME = libft.a
-CC = gcc
-FLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 SRCS = 	ft_isdigit.c\
 		ft_memmove.c\
 		ft_strdup.c\
-		ft_strncmp\
+		ft_strncmp.c\
 		ft_toupper.c\
 		ft_isprint.c\
 		ft_memset.c\
 		ft_striteri.c\
-		ft_strncmp.c\
 		ft_atoi.c\
 		ft_putchar_fd.c\
 		ft_strjoin.c\
@@ -22,7 +21,6 @@ SRCS = 	ft_isdigit.c\
 		ft_putnbr_fd.c\
 		ft_strlcpy.c\
 		ft_strrchr.c\
-		strlcpy.c\
 		ft_isalnum.c\
 		ft_memchr.c\
 		ft_putstr_fd.c\
@@ -38,23 +36,46 @@ SRCS = 	ft_isdigit.c\
 		ft_strmapi.c\
 		ft_tolower.c\
 
-$(NAME): libft.a
+BONUS = ft_lstnew.c\
+		ft_lstadd_front.c\
+		ft_lstsize.c\
+		ft_lstlast.c\
+		ft_lstadd_back.c\
+		ft_lstdelone.c\
+		ft_lstclear.c\
+		ft_lstiter.c\
+		ft_lstmap.c\
 
-OBJCTS = $(SRCS:.c=.o)
+OBJDIR = objs
+
+OBJCTS = $(addprefix $(OBJDIR)/, $(SRCS:.c=.o))
+OBJCTSBONUS = $(addprefix $(OBJDIR)/, $(BONUS:.c=.o))
 
 all: $(NAME)
 
-$(NAME): $(OBJCTS) libft.h
-	ar crs $(NAME) $(OBJCTS)
+bonus: $(OBJCTSBONUS) $(NAME)
+	ar crs $(NAME) $(OBJCTS) $(OBJCTSBONUS)
 
-$(OBJCTS): $(SRCS)
-	$(CC) $(FLAGS) -c $(SRCS)
+$(OBJDIR):
+	@mkdir -p $@
+
+
+$(NAME): $(OBJDIR) $(OBJCTS) 
+	ar crs $(NAME) $(OBJCTS)
+$(OBJCTSBONUS): $(OBJDIR)/%.o: %.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
+
+$(OBJCTS): $(OBJDIR)/%.o: %.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJCTS)
+	@rm -rf $(OBJDIR)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
 
+.PHONY: fclean clean all
+
+re: fclean all

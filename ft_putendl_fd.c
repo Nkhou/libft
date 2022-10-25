@@ -6,17 +6,16 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 21:59:48 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/20 15:31:58 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/24 18:31:42 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	char n;
-	int i;
+	char	n;
+	int		i;
 
 	i = 0;
 	n = '\n';

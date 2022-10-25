@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 22:28:18 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/17 22:28:46 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/24 16:59:55 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	else
 	{
-		if(n >= 0 && n <= 9)
+		if (n >= 0 && n <= 9)
 			ft_putchar_fd(n + '0', fd);
 		else
 		{

@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 22:31:09 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/21 22:07:55 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/24 18:34:15 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,9 @@ void	ft_free(char **p, int last)
 	}
 	free(*p);
 }
+
 static int	ft_skip(char const *s, int i, char c);
+
 int	ft_malloc(char const *s, char **p, char c, int nwords)
 {
 	int	i;
@@ -47,24 +49,24 @@ int	ft_malloc(char const *s, char **p, char c, int nwords)
 		if (!p[r])
 		{
 			ft_free(&p[r], r);
-			return (0); // Failure
+			return (0);
 		}
 		r++;
 	}
-	return (1);// Success
+	return (1);
 }
 
-static int ft_skip(char const *s, int i, char c)
+static int	ft_skip(char const *s, int i, char c)
 {
 	while (s[i] && s[i] == c)
 		i++;
 	return (i);
 }
+
 int	ft_word(char const *s, char c)
 {
-	
-	int i;
-	int words;
+	int	i;
+	int	words;
 
 	i = 0;
 	words = 0;
@@ -83,15 +85,15 @@ char	**ft_split(char const *s, char c)
 {
 	char	**p;
 	int		count;
-	int	i;
-	int	j;
-	int	r;
+	int		i;
+	int		j;
+	int		r;
 
 	if (!s)
-		return NULL;
+		return (NULL);
 	count = ft_word(s, c);
-	p = (char **) malloc(sizeof(char *) * (count + 1)); // Array of strings (length = count + 1 (NULL))
-	if (!p || ft_malloc(s, p, c, count) == 0) // Protection
+	p = (char **) malloc(sizeof(char *) * (count + 1));
+	if (!p || ft_malloc(s, p, c, count) == 0)
 		return (NULL);
 	j = 0;
 	i = 0;
@@ -99,10 +101,8 @@ char	**ft_split(char const *s, char c)
 	{
 		r = 0;
 		i = ft_skip(s, i, c);
-		while (s[i] && s[i] !=c)
-		{
+		while (s[i] && s[i] != c)
 			p[j][r++] = s[i++];
-		}
 		p[j][r] = '\0';
 		j++;
 	}

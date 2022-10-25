@@ -6,10 +6,11 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:36:56 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/11 19:56:07 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/24 16:42:08 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

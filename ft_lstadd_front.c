@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 23:29:13 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/23 22:13:12 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/24 21:51:07 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	new -> next = *lst;
+	new->next = *lst;
 	*lst = new;
 }
 // int main()
@@ -34,7 +34,6 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 // 	front->next = NULL;
 
 // 	ft_lstadd_front(&lst, front);
-	
 // 	while (lst)
 // 	{
 // 		printf("%d\n",*((int *)lst->content));

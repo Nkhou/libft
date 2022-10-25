@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:37:29 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/19 09:54:37 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/24 18:24:54 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,9 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char	*my_dst;
 	unsigned char	*my_src;
-	size_t	i;
+	size_t			i;
 
 	i = 0;
-	
 	my_dst = (unsigned char *)dst;
 	my_src = (unsigned char *)src;
 	if (my_dst == my_src)
@@ -33,11 +32,11 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	else
 	{
-	while (i < len)
-	{
-		my_dst[i] = my_src[i];
-		i++;
-	}
+		while (i < len)
+		{
+			my_dst[i] = my_src[i];
+			i++;
+		}
 	}
 	return (dst);
 }
@@ -45,20 +44,14 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 // {
 //     char str1[] = ""; // Array of size 100
 //     char str2[] = ""; // Array of size 5
-  
 //     puts("str1 before memmove ");
 //     puts(str1);
-  
 //     /* Copies contents of str2 to sr1 */
 //     memmove(str1, str2, sizeof(str2));
-  
 //     puts("\nstr1 after memmove ");
 //     puts(str1);
-
 // 	ft_memmove(str1, str2, sizeof(str2));
-  
 //     puts("\nstr1 after memmove ");
 //     puts(str1);
-  
 //     return 0;
 // }

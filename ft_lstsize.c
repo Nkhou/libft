@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 01:19:12 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/23 22:04:43 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/24 21:59:17 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,22 +24,22 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
-int	main(void)
-{
-	int i;
-	t_list *lst = malloc(sizeof(t_list));
-	t_list *second = malloc(sizeof(t_list));
-	t_list *third = malloc(sizeof(t_list));
-	t_list *new = malloc(sizeof(t_list));
-	lst->content = "ab";
-	lst->next = second;
-	second->content = "content";
-	second->next = third;
-	third->content = "kbk";
-	third->next = new;
-	new->content = "ent";
-	new->next = NULL;
-	i = ft_lstsize(lst);
-	printf("%d", i);
-	return (0);
-}
+// int	main(void)
+// {
+// 	int	i;
+// 	t_list *lst = malloc(sizeof(t_list));
+// 	t_list *second = malloc(sizeof(t_list));
+// 	t_list *third = malloc(sizeof(t_list));
+// 	t_list *new = malloc(sizeof(t_list));
+// 	lst->content = "ab";
+// 	lst->next = second;
+// 	second->content = "content";
+// 	second->next = third;
+// 	third->content = "kbk";
+// 	third->next = new;
+// 	new->content = "ent";
+// 	new->next = NULL;
+// 	i = ft_lstsize(lst);
+// 	printf("%d", i);
+// 	return (0);
+// }

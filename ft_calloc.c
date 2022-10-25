@@ -6,11 +6,12 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 23:38:37 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/19 12:51:40 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/24 18:25:37 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ca;
@@ -28,7 +29,8 @@ void	*ft_calloc(size_t count, size_t size)
 //             printf("Error! memory not allocated.");
 //             exit(0);
 //         }
-//         printf("Building and calculating the sequence sum of the first 10 terms /n ");
+//         printf("Building and calculating the sequence
+//  sum of the first 10 terms /n ");
 //         for (i = 0; i < 10; ++i) { * (ptr + i) = i;
 //             sum += * (ptr + i);
 //         }

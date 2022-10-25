@@ -6,15 +6,15 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 10:20:56 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/21 21:46:07 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/24 19:29:07 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_lent(long n)
+int	ft_lent(long n)
 {
-	long i;
+	long	i;
 
 	i = 0;
 	if (n < 0)
@@ -24,7 +24,7 @@ int ft_lent(long n)
 	}
 	if (n == 0)
 		i++;
-	while (n  > 0)
+	while (n > 0)
 	{
 		n = n / 10;
 		i++;
@@ -32,17 +32,14 @@ int ft_lent(long n)
 	return (i);
 }
 
-char *ft_change(long n)
+char	*ft_change(char *p, long n)
 {
-	char *p;
-	int len;
-	long a;
-	int i;
+	int		len;
+	long	a;
+	int		i;
 
 	len = ft_lent(n);
-	// printf("%d", len);
 	i = 0;
-	p = (char *) malloc(sizeof(char) * (len + 1));
 	if (!p)
 		return (NULL);
 	if (n < 0)
@@ -50,7 +47,7 @@ char *ft_change(long n)
 		p[i++] = '-';
 		n *= (-1);
 	}
-	if (n >= 0 && n<= 9)
+	if (n >= 0 && n <= 9)
 	{
 		p[i] = n + '0';
 		return (p);
@@ -61,18 +58,22 @@ char *ft_change(long n)
 		n = n / 10;
 		p[len] = a % 10 + 48;
 	}
-	// printf("%s", p);
 	return (p);
 }
-char *ft_itoa(int n)
+
+char	*ft_itoa(int n)
 {
-	char *p;
-	long nb;
-	int i;
+	char	*p;
+	long	nb;
+	int		i;
+	int		len;
+
 	nb = (long)n;
+	len = ft_lent(n);
+	p = (char *) malloc(sizeof(char) * (len + 1));
 	i = ft_lent(nb);
-	p = ft_change(nb);
-	if(!p)
+	p = ft_change(p, nb);
+	if (!p)
 		return (NULL);
 	p[i] = '\0';
 	return (p);
@@ -85,8 +86,10 @@ char *ft_itoa(int n)
 // 			*
 // 			*
 // 		Allocate enough memory to hold the string representation of the number
-// 		Turn the number into its positive version (NB: pay attention to INT_MIN (OVERFLOW !!))
-// 		Convert the number digits into characters and store them into the string array
+// 		Turn the number into its positive version (NB: 
+// pay attention to INT_MIN (OVERFLOW !!))
+// 		Convert the number digits into characters
+//  and store them into the string array
 // 	*/	
 // 	int len;
 
@@ -95,12 +98,10 @@ char *ft_itoa(int n)
 
 // int	ft_get_number_length(int nb)
 // {
-	
 // }
 
 // int main()
 // {
-	
 // 	char *str = ft_itoa(-623);
 // 	// printf("%d\n", INT_MIN);
 // 	printf("%s", str);

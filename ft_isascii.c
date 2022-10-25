@@ -6,14 +6,13 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:36:53 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/11 18:39:34 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/24 16:41:29 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-# include "libft.h"
-
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);

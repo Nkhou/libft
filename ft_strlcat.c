@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:37:46 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/19 19:43:37 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/24 17:09:39 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	i = 0;
 	lnsrc = ft_strlen(src);
 	if (dstsize == 0)
-		return lnsrc;
+		return (lnsrc);
 	lents = ft_strlen(dst);
 	j = lents;
-	if (dstsize <= lents )
+	if (dstsize <= lents)
 		return (dstsize + lnsrc);
-	while ( (j < dstsize - 1) && i < lnsrc)
+	while ((j < dstsize - 1) && i < lnsrc)
 		dst[j++] = src[i++];
 	dst[j] = '\0';
 	return (lents + lnsrc);

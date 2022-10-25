@@ -6,23 +6,19 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:37:38 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/22 21:00:32 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/24 18:34:45 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t i;
-	char *p;
+	size_t	i;
+	char	*p;
 
 	i = 0;
 	p = (char *)s;
-	// if (!s)
-	// 	return (NULL);
-
 	while (p[i])
 	{
 		if (p[i] == (char)c)
@@ -43,6 +39,5 @@ char *ft_strchr(const char *s, int c)
 //    ret = ft_strchr(str, ch);
 
 //    printf("String after |%c| is - |%s|\n", ch, ret);
-   
 //    return(0);
 // }
