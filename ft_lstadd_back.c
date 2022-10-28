@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 16:04:00 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/25 15:01:36 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/27 19:21:28 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,32 +21,24 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		(*lst) = new;
 		return ;
 	}
-	while ((*lst)->next != NULL)
+	while ((*lst)->next != NULL) {
 		(*lst) = (*lst)->next;
+	}
 	(*lst)->next = new;
 	new->next = NULL;
 }
 
 // int main()
 // {
-// 	t_list *lst = NULL;
-// 	t_list *new = malloc(sizeof (t_list));
-
-// 	int a = 444;
-// 	new->content = &a;
-// 	new->next = NULL;
-// 	lst = new;
-
-// t_list *back = malloc(sizeof (t_list));
-
-// 	int b = 9999999;
-// 	back->content =  &b;
-// 	back->next = NULL;
-
-// 	ft_lstadd_back(&lst, back);
-// 	while (lst)
+// 	char *p = "hello";
+// 	char *d = "everyone";
+// 	t_list *l, *l1;
+// 	l = ft_lstnew(p);
+// 	l1 = ft_lstnew(d);
+// 	ft_lstadd_back(&l, l1);
+// 	while (l)
 // 	{
-// 		printf("%d\n",*((int *)lst->content));
-// 		(lst) = (lst)->next;
+// 		printf("%s\n", l->content);
+// 		l = l->next;
 // 	}
 // }

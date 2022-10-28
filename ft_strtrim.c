@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 17:01:09 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/24 22:09:23 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/27 21:39:31 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,13 +50,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (p);
 }
 
-int main()
-{
-	int i;
+// int main()
+// {
+// 	int i;
 
-	i = 0;
-	char *s1 = "\t   \n\n\n  \n\n\t \t\t\t\n  \t\t\t\t  ";
-	char *d = ft_strtrim(s1, " \n\t");
-	printf("\n%s", d);
-	return (0);
-}
+// 	i = 0;
+// 	char *s1 = "ABCYTYTYABCUYTUYTUYTBCABC";
+// 	char *d = ft_strtrim(s1, "ABC");
+// 	printf("\n%s", d);
+// 	return (0);
+// }

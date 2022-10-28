@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 10:20:56 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/24 19:29:07 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/27 21:05:29 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,11 @@ int	ft_lent(long n)
 	return (i);
 }
 
-char	*ft_change(char *p, long n)
-{
-	int		len;
+char	*ft_change(char *p, long n, int len)
+{	
 	long	a;
 	int		i;
 
-	len = ft_lent(n);
 	i = 0;
 	if (!p)
 		return (NULL);
@@ -72,7 +70,7 @@ char	*ft_itoa(int n)
 	len = ft_lent(n);
 	p = (char *) malloc(sizeof(char) * (len + 1));
 	i = ft_lent(nb);
-	p = ft_change(p, nb);
+	p = ft_change(p, nb, len);
 	if (!p)
 		return (NULL);
 	p[i] = '\0';

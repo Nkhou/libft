@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:36:36 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/24 16:38:48 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/26 18:31:39 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,13 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-/*int main()
-{
-	char str[50] = "GeeksForGeeks is for programming geeks.";
-	printf("\nBefore (): %s\n", str);
 
-	// Fill 8 characters starting from str[13] with '.'
-	ft_bzero(str +3 , 8*sizeof(char));
-
-	printf("After memset():  %s", str);
-	return 0;
-}
- */
+// int main()
+// {
+// 	char str[70] = "hello everyoneGeeksForGeeks is for programming geeks";
+// 	char s[70] = "hello everyoneGeeksForGeeks is for programming geeks";
+// 	ft_bzero(str, 4*sizeof(char));
+// 	ft_bzero(s , 4*sizeof(char));
+// 	printf("%s\n", str);
+// 	printf("%s\n", s);
+// }

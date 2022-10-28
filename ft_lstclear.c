@@ -6,12 +6,16 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 18:35:52 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/25 15:21:07 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/26 23:04:35 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// void del(void *p)
+// {
+// 	free(p);
+// }
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*cmp;
@@ -21,26 +25,27 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	{
 		cmp = *lst;
 		*lst = (*lst)->next;
-		ft_lstdelone(cmp, del);
+		del(cmp);
 	}
 }
 
 // int main()
 // {
-// 	t_list **lst = NULL;
-// 	t_list *second = NULL;
-// 	t_list *third = NULL;
-// 	t_list *new = NULL;
-// 	*lst = ft_lstnew("d");
-// 	second = ft_lstnew("a");
-// 	third = ft_lstnew("m");
-// 	new = ft_lstnew("n");
-// 	lst = &second;
-// 	ft_lstadd_front(lst, new);
-// 	ft_lstdelone(lst, third);
-// 	while (lst)
+// 	char *p ="hello";
+// 	char *q = "everyone";
+// 	t_list *lst, *l, *tmp;
+// 	l = ft_lstnew(p);
+// 	lst = ft_lstnew(q);
+// 	tmp = l;
+// 	ft_lstadd_front(&tmp, lst);
+// 	printf("%s\n", lst->content);
+// 	ft_lstclear(&tmp, del);
+// 	printf("%s\n", lst->content);
+// 	printf("%s\n", tmp->content);
+// 	printf("hello\n");
+// 	while (tmp)
 // 	{
-// 		printf("%d", lst->content);
-// 		lst = lst->next;
+// 		printf("%s\n", tmp->content);
+// 		tmp = tmp->next;
 // 	}
 // }

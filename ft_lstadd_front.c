@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 23:29:13 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/24 21:51:07 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/26 21:12:42 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,24 +19,15 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 }
 // int main()
 // {
-// 	t_list *lst = NULL;
-// 	t_list *new = malloc(sizeof (t_list));
-
-// 	int a = 444;
-// 	new->content = &a;
-// 	new->next = NULL;
-// 	lst = new;
-
-// t_list *front = malloc(sizeof (t_list));
-
-// 	int b = 888;
-// 	front->content =  &b;
-// 	front->next = NULL;
-
-// 	ft_lstadd_front(&lst, front);
-// 	while (lst)
+// 	char *d = "hello";
+// 	char *c = "everyone";
+// 	t_list *l, *l1;
+// 	l = ft_lstnew(d);
+// 	l1 = ft_lstnew(c);
+// 	ft_lstadd_front(&l, l1);
+// 	while(l)
 // 	{
-// 		printf("%d\n",*((int *)lst->content));
-// 		(lst) = (lst)->next;
+// 		printf("%s", l->content);
+// 		l = l->next;
 // 	}
 // }

@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:36:26 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/24 18:50:55 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/26 17:02:44 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,14 +55,3 @@ int	ft_atoi(const char *str)
 		res = ft_at(str + i, sgn);
 	return (res * sgn);
 }
-// int main(void)
-// {
-//     int i;
-// 	int j;
-//     char *s;
-//     s = " -9885";
-//     j = atoi(s);     /* i = -9885 */
-//     printf("j = %d\n",j);
-// 	i = ft_atoi(s);     /* i = -9885 */
-//     printf("i = %d\n",i);
-// }

@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 14:20:15 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/24 17:09:46 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/27 22:19:57 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,20 +31,20 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t	dstsize)
 	dst[i] = '\0';
 	return (cmp);
 }
-// void test(int size)
-// {
-// 	char string[] = "Hello there, Venus";
-// 	char buffer[19];
-// 	int r;
+void test(int size)
+{
+	char *string = "Hello there, Venus";
+	char *buffer = "aa";
+	int r;
 
-// 	r = strlcpy( buffer, string, size);
-// 	printf("Copied '%s' into '%s', length %d\n", string, buffer, r);
-// }
+	r = ft_strlcpy( buffer, string, size);
+	printf("Copied '%s' into '%s', length %d\n", string, buffer, r);
+}
 
-// int main()
-// {
-// 	test(30);
-// 	test(1);
-// 	test(0);
-// 	return(0);
-// }
+int main()
+{
+	test(30);
+	// test(1);
+	// test(0);
+	return(0);
+}

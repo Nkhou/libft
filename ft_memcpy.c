@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:37:24 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/24 16:58:32 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/28 20:40:36 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,8 @@ void	*ft_memcpy( void	*destination, const void	*source, size_t size )
 }
 // int main()
 // {
-// 	const char src[] = "la vie est belle";
-// 	char dest[40] = "hellooo";
-// 	printf("before ft_memcpy = %s\n", dest);
-// 	ft_memcpy(dest, src, 16);
-// 	printf("after memcpy = %s", dest);
+// 	char src[5] = "abcd";
+// 	memcpy(src + 1, src);
+// 	printf("after memcpy = %s", src);
 // 	return (0);	
 // }

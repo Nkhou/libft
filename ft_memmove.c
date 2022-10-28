@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:37:29 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/24 18:24:54 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/27 22:59:59 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,11 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 //     puts("\nstr1 after memmove ");
 //     puts(str1);
 //     return 0;
+// }
+// int main()
+// {
+// 	char src[5] = "abcd";
+// 	ft_memmove(src + 1, src, 3);
+// 	printf("after memcpy = %s", src);
+// 	return (0);	
 // }
