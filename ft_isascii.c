@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:36:53 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/24 16:41:29 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/29 15:12:34 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,3 @@ int	ft_isascii(int c)
 		return (1);
 	return (0);
 }
-
-// int main()
-// {
-// 	char str[] = "12d*ds54";
-// 	int i;
-// 	i = 0;
-// 	while (str[i])
-// 	{
-// 		if (ft_isascii(str[i]) != 0)
-// 			i++;
-// 		else
-// 		{
-// 		   printf("is not alpha");
-// 		   break;
-// 		}
-// 	}
-// 	return 0;
-// }

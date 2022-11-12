@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 23:59:45 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/27 18:17:13 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/11/01 12:00:18 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,3 @@ char	*ft_strdup(const char *s1)
 	c[i] = '\0';
 	return (c);
 }
-// int main() {
-//   char src[] = "helloiisiuai";
-//   printf("%s", ft_strdup(src));
-//   return 0;
-//   free(src);
-// }

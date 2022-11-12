@@ -6,11 +6,12 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 17:01:09 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/27 21:39:31 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/11/01 12:11:45 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 static int	ft_is_in_set(char s1, char const *set)
 {
 	int	i;
@@ -49,14 +50,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	p[d] = '\0';
 	return (p);
 }
-
-// int main()
-// {
-// 	int i;
-
-// 	i = 0;
-// 	char *s1 = "ABCYTYTYABCUYTUYTUYTBCABC";
-// 	char *d = ft_strtrim(s1, "ABC");
-// 	printf("\n%s", d);
-// 	return (0);
-// }

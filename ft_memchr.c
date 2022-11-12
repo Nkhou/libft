@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:37:15 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/24 16:49:52 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/31 15:15:51 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,20 +27,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-//	int main () {
-//    //const char str[] = "hello.salut.hgdf";
-//    const int str[] = {1,2,3,4};
-//    int ch = 3;
-//    int *ret;
-//    int i;
-//    i = 0;
-//    ret = ft_memchr(str, ch, 4);
-//    while (i < 3)
-//    {
-// 	printf("%d", ret[i++]);
-//    }
-//    //printf("String after |%c| is - |%s|\n", ch, ret);
-
-//    return(0);
-// }

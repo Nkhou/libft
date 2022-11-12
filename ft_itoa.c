@@ -6,13 +6,13 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 10:20:56 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/27 21:05:29 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/11/01 11:24:08 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lent(long n)
+static int	ft_lent(long n)
 {
 	long	i;
 
@@ -32,7 +32,7 @@ int	ft_lent(long n)
 	return (i);
 }
 
-char	*ft_change(char *p, long n, int len)
+static char	*ft_change(char *p, long n, int len)
 {	
 	long	a;
 	int		i;
@@ -76,31 +76,3 @@ char	*ft_itoa(int n)
 	p[i] = '\0';
 	return (p);
 }
-
-// char *ft_itoa(int nb)
-// {
-// 	/*
-// 		- Get number length (take into consideration - sign)
-// 			*
-// 			*
-// 		Allocate enough memory to hold the string representation of the number
-// 		Turn the number into its positive version (NB: 
-// pay attention to INT_MIN (OVERFLOW !!))
-// 		Convert the number digits into characters
-//  and store them into the string array
-// 	*/	
-// 	int len;
-
-// 	len = ft_get_number_length(n);
-// }
-
-// int	ft_get_number_length(int nb)
-// {
-// }
-
-// int main()
-// {
-// 	char *str = ft_itoa(-623);
-// 	// printf("%d\n", INT_MIN);
-// 	printf("%s", str);
-// }

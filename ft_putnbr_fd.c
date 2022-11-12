@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 22:28:18 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/24 16:59:55 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/29 15:50:32 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,3 @@ void	ft_putnbr_fd(int n, int fd)
 		}
 	}
 }
-
-// int main(int ac, char **av)
-// {
-// 	int fd1;
-// 	if (!ac)
-// 		return 0;
-// 	//get the file descriptor of the file
-// 	fd1 = open(av[1], O_WRONLY);
-// 	printf("fd1: %d\n", fd1);
-// 	ft_putnbr_fd(-2147483648, 1);
-// 	close(fd1);
-// 	return 0;
-// }

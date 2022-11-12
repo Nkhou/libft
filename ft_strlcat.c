@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:37:46 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/24 17:09:39 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/29 15:55:04 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,19 +32,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[j] = '\0';
 	return (lents + lnsrc);
 }
-
-// #include<string.h>
-
-// int main()
-// {
-// 	char buff1[0xF00] = "test1";
-//     char buff2[0xF00] = "test1";
-
-// 	char *str = "2222222";
-//     size_t max = 6;
-// 	size_t r1 = strlcat(0, str, 0);
-// 	//size_t r2 = ft_strlcat(buff2, str, max);
-
-// 	printf("%zu %d", r1,6);
-// 	return (0);
-// }

@@ -6,13 +6,13 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 22:31:09 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/27 23:16:38 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/11/01 10:52:41 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_free(char **p, int last)
+static void	ft_free(char **p, int last)
 {
 	int	i;
 
@@ -22,12 +22,12 @@ void	ft_free(char **p, int last)
 		free(p[i]);
 		i++;
 	}
-	free(*p);
+	free(p);
 }
 
 static int	ft_skip(char const *s, int i, char c);
 
-int	ft_malloc(char const *s, char **p, char c, int nwords)
+static int	ft_malloc(char const *s, char **p, char c, int nwords)
 {
 	int	i;
 	int	j;
@@ -35,7 +35,6 @@ int	ft_malloc(char const *s, char **p, char c, int nwords)
 
 	j = 0;
 	r = 0;
-	j = ft_skip(s, j, c);
 	while (r < nwords)
 	{
 		j = ft_skip(s, j, c);
@@ -48,7 +47,7 @@ int	ft_malloc(char const *s, char **p, char c, int nwords)
 		p[r] = (char *)malloc(sizeof(char) * (i + 1));
 		if (!p[r])
 		{
-			ft_free(&p[r], r);
+			ft_free(p, r);
 			return (0);
 		}
 		r++;
@@ -63,7 +62,7 @@ static int	ft_skip(char const *s, int i, char c)
 	return (i);
 }
 
-int	ft_word(char const *s, char c)
+static int	ft_word(char const *s, char c)
 {
 	int	i;
 	int	words;
@@ -109,33 +108,3 @@ char	**ft_split(char const *s, char c)
 	p[j] = NULL;
 	return (p);
 }
-
-// void display_array(char **arr)
-// {
-// 	int i = 0;
-
-// 	if (!arr)
-// 		return ;
-// 	while (arr[i])
-// 	{
-// 		printf("[%s]", arr[i]);
-// 		i++;
-// 	}
-// 	printf("\n");
-// }
-
-// int	main(void)
-// {
-// 	display_array(ft_split("  dev,,cdjdvj   vvxxcz", ','));
-// 	display_array(ft_split("  dev,,cdjdvj   vvxxcz", ' '));
-// 	display_array(ft_split("  dev,,cdjdvj   vvxxcz", ' '));
-// 	display_array(ft_split("  dev,,cdjdvj   vvxxcz", 'v'));
-// 	display_array(ft_split("  dev,,cdjdvj   vvxxcz", 'd'));
-// 	display_array(ft_split("n  dev,,cdjdvj   vvxxcz", '\0'));
-// 	display_array(ft_split("  dev,,cdjdvj   vvxxcz", 'z'));
-// 	display_array(ft_split("", ' '));
-// 	display_array(ft_split("", '\0'));
-// 	display_array(ft_split(" ", '\0'));
-// 	display_array(ft_split("hello", 'l'));
-// 	return (0);
-// }

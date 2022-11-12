@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:38:20 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/24 18:38:04 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/29 15:56:03 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,3 @@ int	ft_toupper(int c)
 	}
 	return (c);
 }
-// int main()
-// {
-// 	char str ='a';	
-// 	printf("%c",ft_toupper(str));
-// 	return 0;
-// }

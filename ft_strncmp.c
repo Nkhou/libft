@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:38:01 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/24 17:11:21 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/29 15:55:24 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,22 +29,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
-/*int main () {
-   char str1[15] = "ABC\0\0\0\0";
-   char str2[15] = "ABCDEF";
-   int ret;
-
-   ret = ft_strncmp(str1, str2, 4);
-
-   if(ret < 0) {
-	  printf("str1 is less than str2");
-   } else if(ret > 0) {
-	  printf("str2 is less than str1");
-   } else {
-	  printf("str1 is equal to str2");
-   }
-   
-   return(0);
-}
-*/

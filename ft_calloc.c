@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 23:38:37 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/27 19:24:28 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/11/01 18:10:29 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,24 +22,3 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(ca, count * size);
 	return (ca);
 }
-
-// int main()
-// {
-// 	int *p;
-// 	p = ft_calloc(10, sizeof(int));
-// 	if(!p)
-// 	{
-// 		printf("faild\n");
-// 		exit(0);
-// 	}
-// 	int sum = 0;
-// 	int i = 0;
-// 	while (i < 10)
-// 	{
-// 		*(p + i) = i;
-// 		sum += *(p + i);
-// 		i++;
-// 	}
-// 	printf("%d", sum);
-// 	free(p);
-// }

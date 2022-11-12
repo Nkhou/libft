@@ -6,13 +6,13 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:36:26 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/26 17:02:44 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/11/01 18:09:43 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_at(const char *str, int sgn)
+static int	ft_at(const char *str, int sgn)
 {
 	long	i;
 	long	res;
@@ -52,6 +52,6 @@ int	ft_atoi(const char *str)
 			sgn *= (-1);
 		i++;
 	}
-		res = ft_at(str + i, sgn);
+	res = ft_at(str + i, sgn);
 	return (res * sgn);
 }

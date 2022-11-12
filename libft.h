@@ -6,17 +6,13 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 11:30:52 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/26 20:57:25 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/11/03 19:47:40 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <unistd.h>
-# include <stdio.h>
-# include <string.h>
 # include <stdlib.h>
-# include <limits.h>
 # include <unistd.h>
 # include <fcntl.h>
 

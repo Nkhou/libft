@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:38:13 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/24 18:37:42 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/29 15:55:57 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,3 @@ int	ft_tolower(int c)
 		c += 32;
 	return (c);
 }
-// int main()
-// {
-// 	char str[] = "Hello IT";
-// 	int i;
-// 	i = 0;
-// 	while (str[i])
-// 	{
-// 		ft_tolower(str[i]);
-// 		i++;
-// 	}
-// 	printf("%s", str);
-// 	return (0);
-// }

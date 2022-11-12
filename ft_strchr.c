@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:37:38 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/24 18:34:45 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/29 15:54:44 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,3 @@ char	*ft_strchr(const char *s, int c)
 		return (&p[i]);
 	return (NULL);
 }
-//  int main () {
-//     const char str[] = "GGSG.hhdhsh.dshh";
-// 	char ch = '.';
-// 	char *ret;
-
-//    ret = ft_strchr(str, ch);
-
-//    printf("String after |%c| is - |%s|\n", ch, ret);
-//    return(0);
-// }

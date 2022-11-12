@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:37:09 by nkhoudro          #+#    #+#             */
-/*   Updated: 2022/10/24 16:42:22 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2022/10/29 15:12:50 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,3 @@ int	ft_isprint(int c)
 		return (1);
 	return (0);
 }
-
-// int main()
-// {
-// 	char str[] = "12d*ds54";
-// 	int i;
-// 	i = 0;
-// 	while (str[i])
-// 	{
-// 		if (ft_isprint(str[i]) != 0)
-// 			i++;
-// 		else
-// 		{
-// 		   printf("is not alpha");
-// 		   break;
-// 		}
-// 	}
-// 	return 0;
-// }
